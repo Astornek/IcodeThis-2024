@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    scrollbar-color: var(--second-clr) transparent;
+    scrollbar-track-color: transparent;
+    scrollbar-face-color: var(--second-clr);
+    scrollbar-highlight-color: var(--second-clr);
+    scrollbar-shadow-color: var(--second-clr);
+    scrollbar-darkshadow-color: var(--second-clr);
+}
+
+:root {
+    --prim-clr: rgb(222, 183, 132);
+    --sec-clr: #DE9C87;
+    --text-clr: rgb(16, 4, 76);
+    --text-clr-2: rgb(57, 59, 93);
+    --orange-clr: rgb(222, 128, 13);
+    --green-clr: rgb(125, 204, 64);
+    --second-clr: rgb(64, 125, 204);
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--second-clr);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: lightgray;
+}
+.wrapper {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 4rem
+}
+.wrap-left {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    max-width: 26rem;
+    width: 100%;
+    box-shadow: 0 0 5px 1px rgb(60, 58, 58, 0.5);
+
+}
+.wrap-left::after {
+    position: absolute;
+    content: '';
+    max-width: 22rem;
+    height: 40px;
+    border: 2px solid white;
+    width: 100%;
+    z-index: -1;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    background-color: rgb(224, 205, 205);
+
+}
+.storage {
+    display: flex;
+    gap: .7rem;
+    font-weight: 500;
+}
+.chart-box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+.total-storage h2 , .used-storage h2 {
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+}
+.total-storage p,
+.used-storage p {
+    font-weight: 500;
+}
+.used-storage p, .used-storage h2 {
+    color: var(--text-clr);
+}
+.view-btn {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: .5rem .8rem;
+    margin-top: 1rem;
+    box-shadow: 2px 2px 0 0 lightblue, 4px 4px 0 0 black;
+    transition: all 0.5s;
+}
+.view-btn:hover {
+    box-shadow: -4px -4px 0 0 lightblue, -8px -8px 0 0 black;
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+}
+.right-wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    width: 100%;
+    border: 2px solid white;
+    background-color: rgb(224, 205, 205);
+    padding: 1rem;
+    border-radius: 15px;
+    align-items: center;
+}
+h2 {
+    font-size: 1.4rem;
+    margin: .5rem 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.right-wrap .plan:nth-child(2) .bar {
+    width: 25px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: orange;
+    display: block;
+}
+.right-wrap .plan:nth-child(2){
+    background-color: black;
+    border-radius: 15px;
+    width: 120%;
+    color: white;
+    padding: 3rem 2rem;
+    cursor: pointer;
+    margin: .5rem 0;
+}
+.current-plan {
+    font-weight: 500;
+}
+.right-wrap .plan:nth-child(3),.right-wrap .plan:nth-child(4) {
+    background-color: white;
+    border-radius: 15px;
+    width: 120%;
+    padding: 3rem 2rem;
+    cursor: pointer;
+    margin: .5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.right-wrap .plan:nth-child(3) .bar {
+    width: 25px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: lightblue;
+    display: block;
+}
+.price {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: .5rem .8rem;
+    margin-bottom: 1rem;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.or {
+    color: var(--text-clr);
+    font-size: .9rem;
+    font-weight: 500;
+}
+.right-wrap .plan:nth-child(4) .bar {
+    width: 25px;
+    height: 5px;
+    border-radius: 5px;
+    background-color:purple;
+    display: block;
+}
+@media (max-width:980px) {
+    .wrapper {
+        margin: 2rem 0;
+    }
+}
+@media (max-width:450px) {
+    .chart-box {
+        flex-direction: column;
+    }
+    .plan {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .left,.right {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    h2 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    }
+}
