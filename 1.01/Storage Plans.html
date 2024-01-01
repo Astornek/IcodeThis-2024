@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap"   rel="stylesheet">
+</head>
+
+<!-- Change code below this line -->
+<body>
+   <div class="wrapper">
+    <div class="wrap-left">
+        <div class="storage">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="26" height="26" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l4 4" /><path d="M5 12l4 -4" /></svg></span>
+            <p class="total">Total storage</p>
+        </div>
+        <div class="chart-box">
+            <div class="chart">
+                 <canvas id="chart" width="200" height="200"></canvas>
+            </div>
+            <div class="info">
+                <div class="total-storage">
+                    <h2>30 GB</h2>
+                    <p>Total storage</p>
+                </div>
+                <div class="used-storage">
+                    <h2>3.6 GB</h2>
+                    <p>10% used</p>
+                </div>
+                <button class="view-btn">View details</button>
+            </div>
+        </div>
+    </div>
+    <div class="right-wrap">
+        <h2 class="plans">Plans</h2>
+        <div class="plan">
+            <span class="bar"></span>
+            <h2>30 GB</h2>
+            <p class="current-plan">Current plan</p>
+        </div>
+        <div class="plan">
+            <div class="left">
+            <span class="bar"></span>
+            <h2>100 GB</h2>
+            </div>
+            <div class="right">
+                <button class="price">NOK 17.00/month</button>
+                <p class="or">or prepay anually NOK 170.00/year</p>
+            </div>
+        </div>
+        <div class="plan">
+            <div class="left">
+                <span class="bar"></span>
+                <h2>1 TB</h2>
+            </div>
+            <div class="right">
+                <button class="price">NOK 17.00/month</button>
+                <p class="or">or prepay anually NOK 170.00/year</p>
+            </div>
+        </div>
+    </div>
+   </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+<!-- Change code above this line -->
+
+</html>
