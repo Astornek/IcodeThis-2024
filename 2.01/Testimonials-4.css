@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    scrollbar-color: var(--second-clr) transparent;
+    scrollbar-track-color: transparent;
+    scrollbar-face-color: var(--second-clr);
+    scrollbar-highlight-color: var(--second-clr);
+    scrollbar-shadow-color: var(--second-clr);
+    scrollbar-darkshadow-color: var(--second-clr);
+}
+
+:root {
+    --prim-clr: rgb(222, 183, 132);
+    --sec-clr: #DE9C87;
+    --text-clr: rgb(16, 4, 76);
+    --text-clr-2: rgb(57, 59, 93);
+    --orange-clr: rgb(222, 128, 13);
+    --green-clr: rgb(125, 204, 64);
+    --second-clr: rgb(64, 125, 204);
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--second-clr);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: lightgray;
+    color: var(--text-clr);
+}
+.wrapper {
+    max-width: 40rem;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    text-align: center;
+}
+img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.quote-wrap {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+.quote {
+    background-color: var(--text-clr);
+    color: white;
+    padding: .5rem;
+    text-align: center;
+    max-width: 23rem;
+    width: 100%;
+    padding: 1.5rem  1rem;
+    border-radius: 5px;
+    font-size: .95rem;
+    position: relative;
+}
+span {
+    cursor: pointer;
+}
+.quote::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid var(--text-clr);
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h2 {
+    margin: .2rem 0;
+    font-size: 1.3rem;
+}
+.des {
+    margin: .2rem 0 1.5rem;
+    font-size: .95rem;
+}
+.name {
+    margin: .5rem 0;
+    font-weight: 600;
+}
+.role {
+    font-size: .9rem;
+    color: rgb(118, 109, 109);
+}
