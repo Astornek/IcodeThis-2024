@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    scrollbar-color: var(--second-clr) transparent;    
+    scrollbar-track-color: transparent;    
+    scrollbar-face-color: var(--second-clr);   
+    scrollbar-highlight-color: var(--second-clr);
+    scrollbar-shadow-color: var(--second-clr);
+    scrollbar-darkshadow-color: var(--second-clr);     
+}
+
+:root {
+    --prim-clr: rgb(222, 183, 132);
+    --sec-clr: #DE9C87;
+    --text-clr: rgb(16, 4, 76);
+    --text-clr-2: rgb(81, 82, 102);
+    --orange-clr: rgb(222, 128, 13);
+    --green-clr: rgb(125, 204, 64);
+    --second-clr: rgb(64, 125, 204);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--second-clr);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: darkblue;
+}
+.wrapper {
+    background-color: var(--second-clr);
+    color: white;
+    padding: 2rem;
+    max-width: 20rem;
+    width: 100%;
+    margin-top: -5px;
+    box-shadow: 0 0 10px black;
+    z-index: 1;
+    position: relative;
+}
+main {
+    width: 100%;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-wrap {
+    z-index: 2;
+}
+img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+.wrapper ul li {
+    margin-bottom: .5rem;
+    display: flex;
+    font-size: .8rem;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: .2rem;
+    width: max-content;
+    cursor: pointer;
+
+}
+.wrapper li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.4s ease;
+    
+}
+ 
+.wrapper li:hover::before {
+    width: 100%;
+}
+.follow-btn {
+    display: flex;
+    justify-content: center;
+    padding: .7rem 1rem;
+    background-color: yellow;
+    color: var(--text-clr);
+    font-weight: 600;
+    font-size: 1rem;
+    gap: .5rem;
+    position:absolute;
+    right: -55px;
+    border: none;
+    transition: all 0.5s;
+    box-shadow: 0 0 35px 1px black;
+}
+.follow-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+@media (max-width:450px) {
+    img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    }
+    .wrapper {
+        max-width: 16rem;
+    }
+    .follow-btn {
+    padding: .4rem .5rem;
+    right: -25px;
+    font-size: .95rem;
+    }
+    
+}
