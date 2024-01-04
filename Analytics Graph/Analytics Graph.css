@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    scrollbar-color: var(--second-clr) transparent;
+    scrollbar-track-color: transparent;
+    scrollbar-face-color: var(--second-clr);
+    scrollbar-highlight-color: var(--second-clr);
+    scrollbar-shadow-color: var(--second-clr);
+    scrollbar-darkshadow-color: var(--second-clr);
+}
+
+:root {
+    --prim-clr: rgb(222, 183, 132);
+    --sec-clr: #DE9C87;
+    --text-clr: rgb(16, 4, 76);
+    --text-clr-2: rgb(57, 59, 93);
+    --orange-clr: rgb(222, 128, 13);
+    --green-clr: rgb(125, 204, 64);
+    --second-clr: rgb(64, 125, 204);
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--second-clr);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: var(--text-clr);
+}
+.wrapper {
+    max-width: 30rem;
+    width: 100%;
+    background-color: rgb(40, 40, 130);
+    color: white;
+}
+header {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgb(14, 14, 91);
+}
+h1 {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+.chart-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2rem;
+}
+.left {
+    position: relative;
+    max-width: 13rem;
+    width: 100%;
+}
+.right {
+    max-width: 13rem;
+    width: 100%;
+    color: white;
+    font-size: .9rem;
+}
+.chart-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: .9rem;
+}
+.chart-text span {
+    font-size: 2rem;
+    margin-bottom: -.3rem;
+    font-weight: 600;
+}
+.right {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.per {
+    display: flex;
+    gap: .5rem;
+}
+.per p {
+font-size: .8rem;
+}
+.per span{
+
+width: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50px;
+color: black;
+font-size: .8rem;
+padding: 1px 5px;
+}
+.right .per:first-child span{
+    background-color: rgb(144, 40, 144);
+}
+.right .per:nth-child(2) span {
+    background-color: rgb(164, 81, 94);
+}
+.right .per:nth-child(3) span {
+    background-color: rgb(251, 169, 16);
+}
+.right .per:nth-child(4) span {
+    background-color:rgb(219, 219, 12);
+}
+.right .per:nth-child(5) span {
+    background-color: rgb(37, 165, 120);
+}
+@media (max-width:480px) {
+    .chart-box {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wrapper {
+        width: 95%;
+    }
+}
