@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap"   rel="stylesheet">
+
+
+</head>
+
+<!-- Change code below this line -->
+<body>
+   <div class="wrapper">
+    <header>
+        <h2>Our new <span>Terms of Service</span>and <span>Privacy Statement</span> are in effect</h2>
+        <span class="close-btn" onclick="closeWrap()"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg></span>
+    </header>
+    <main>
+        <div class="head">
+            <h3>Documents</h3>
+            <button><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg></span>Add New</button>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Search documents">
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg></span>
+        </div>
+        <div class="box one">
+            <a href="https://imgur.com/akgXndr"><img src="https://i.imgur.com/akgXndr.png" title="source: imgur.com" /></a>
+            <p class="program">Scrums / Landing page copy</p>
+        </div>
+        <div class="box two">
+            <a href="https://imgur.com/ntu4cgo"><img src="https://i.imgur.com/ntu4cgo.png" title="source: imgur.com" /></a>
+            <p class="program">Scrumbs / Feature brief</p>
+        </div>
+        <div class="box three">
+            <a href="https://imgur.com/FZuwjA8"><img src="https://i.imgur.com/FZuwjA8.png" title="source: imgur.com" /></a>
+            <p class="program">Scrumbs / Logo</p>
+        </div>
+    </main>
+   </div>
+   <script>
+    function closeWrap() {
+    const wrapper = document.querySelector('.wrapper');
+    wrapper.classList.add('closed')
+    
+    
+    setTimeout(() => {
+    wrapper.classList.remove('closed');
+    }, 5000);
+    }
+   </script>
+</body>
+<!-- Change code above this line -->
+
+</html>
